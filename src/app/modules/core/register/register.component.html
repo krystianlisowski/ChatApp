@@ -1,0 +1,33 @@
+<div class="l-container">
+    <div class="l-row u-justify-center u-align-center">
+        <div class="l-col l-col--md33 register-content u-p-0">
+            <div class="register-content__header">
+                <img src="/assets/czaty_logo.png" alt="">
+                <span class="u-text-size-5 u-text-color--white">Zarejestruj się i rozpocznij czat!</span>
+            </div>
+            <div class="register-content__form">
+                <form [formGroup]="registerForm">
+                    <mat-form-field>
+                        <input formControlName="email" matInput placeholder="Email">
+                        <mat-error *ngIf="email.dirty && email.hasError('required')">Email jest wymagany!</mat-error>
+                        <mat-error *ngIf="email.dirty && email.hasError('email')">Niepoprawny format!</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="password" type="password" matInput placeholder="Hasło">
+                        <mat-error *ngIf="password.dirty && password.hasError('required')">Hasło jest wymagane!</mat-error>
+                        <mat-error *ngIf="password.dirty && password.hasError('minlength')">Hasło powinno zawierać minimalnie 8 znaków!</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input formControlName="displayName" type="text" matInput placeholder="Nazwa użytkownika">
+                        <mat-error *ngIf="displayName.dirty && displayName.hasError('required')">Nazwa jest wymagana!</mat-error>
+                        <mat-error *ngIf="displayName.dirty && displayName.hasError('maxlength')">Maksymalnie 20 znaków!</mat-error>
+                    </mat-form-field>
+                </form>
+                <button [disabled]="registerForm.invalid" (click)="register()" mat-raised-button color="accent">Zarejestruj się</button>
+                <span class="u-text-size-7 u-mt-20">Posiadasz już konto?
+                    <a class="u-text-link" href="/login">Zaloguj się</a> ,
+                    aby korzystać z aplikacji Czaty.</span>
+            </div>
+        </div>
+    </div>
+</div>

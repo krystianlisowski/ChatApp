@@ -1,0 +1,31 @@
+.u-font-weight-bold {
+  font-weight: bold;
+}
+.u-cursor-pointer {
+  cursor: pointer;
+}
+
+.u-text-size-4 {
+  font-size: $font-size-4;
+}
+.u-text-size-5 {
+  font-size: $font-size-5;
+}
+.u-text-size-6 {
+  font-size: $font-size-6;
+}
+.u-text-size-7 {
+  font-size: $font-size-7;
+}
+
+.u-text-link {
+  font-size: $font-size-7;
+  color: $violet-primary;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+
+  &:hover {
+    text-decoration: unset;
+  }
+}

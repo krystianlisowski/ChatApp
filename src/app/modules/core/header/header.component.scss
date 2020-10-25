@@ -1,0 +1,55 @@
+@import '../../../styles/01-settings/settings';
+@import '../../../styles/02-tools/tools.scss';
+@import '../../../styles/06-components/components.scss';
+
+
+.header {
+  display: none;
+  @include large-up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 100px;
+    height: 100px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    font-size: 35px;
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+
+    &--container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 400;
+      margin-right: 20px;
+
+      &:hover {
+
+        mat-icon {
+          color: $gray-dark;
+        }
+      }
+    }
+  }
+
+  &__user {
+    display: none;
+
+    @include medium-up {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

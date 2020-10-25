@@ -1,0 +1,85 @@
+@import '../../../styles/01-settings/variables';
+@import "../../../styles/02-tools/tools";
+.message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px 25px;
+  background: $gray-light;
+
+  @include medium-up {
+    width: 60%;
+  }
+
+  &__content {
+    font-size: $font-size-6;
+    margin-top: 10px;
+    color: $gray-dark;
+    font-weight: normal;
+  }
+
+  &__own {
+    border: 2px solid $violet-primary;
+
+    &--position {
+      justify-content: flex-end;
+    }
+  }
+
+  &__guest {
+    border: 2px solid $gray-dark;
+
+    &--position {
+      justify-content: flex-start;
+    }
+  }
+
+  &__user {
+    font-weight: bold;
+    color: $violet-primary;
+  }
+
+  &__date {
+    font-size: $font-size-6;
+    color: $bluey-gray;
+  }
+
+  &__remove {
+    transition: width ease-in 0.2s;
+    width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mat-icon {
+      display: none;
+    }
+  }
+
+  &:hover {
+    & .message__remove {
+      color: $white;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: $violet-primary;
+      height: 100%;
+      width: 100%;
+
+      mat-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+
+.icon {
+  display: none;
+}

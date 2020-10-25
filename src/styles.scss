@@ -1,0 +1,25 @@
+@import './app/styles/01-settings/settings.scss';
+@import './app/styles/02-tools/tools.scss';
+@import './app/styles/03-generic/generic.scss';
+@import './app/styles/04-elements/elements.scss';
+@import './app/styles/05-objects/objects.scss';
+@import './app/styles/06-components/components.scss';
+@import './app/styles/08-utilities/utilities.scss';
+
+.mat-tab-group[mat-stretch-tabs]>.mat-tab-header .mat-tab-label {
+  background: $violet-primary;
+  color: $gray-light;
+  opacity: 1;
+  height: unset;
+  padding: 10px;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: $gray-light;
+}
+
+.mat-tab-group {
+  border: 2px solid $violet-primary;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}

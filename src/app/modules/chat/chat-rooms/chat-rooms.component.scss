@@ -1,0 +1,41 @@
+@import '../../../styles/01-settings/settings';
+@import '../../../styles/02-tools/mixins';
+
+.rooms {
+  height: 80vh;
+  width: 100%;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+
+  &__content {
+    padding: 25px 15px;
+    height: 100%;
+  }
+
+  &__item {
+      display: flex;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 10px;
+      width: 100%;
+      margin-top: 15px;
+      border: 2px solid $gray-light;
+      color: $gray-light;
+      border-radius: 4px;
+      transition: ease-in 0.3s;
+      cursor: pointer;
+
+    &:hover {
+       border-color: $violet-primary;
+       transition: ease-in 0.1s;
+    }
+  }
+}

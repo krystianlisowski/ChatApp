@@ -1,0 +1,27 @@
+.l-row {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+
+    @include medium-up {
+        flex-direction: row;
+    }
+
+    &--center-y {
+        align-items: center;
+    }
+
+    &__nav{
+      @include medium-up {
+        max-width: 740px;
+    }
+
+    @include large-up {
+        max-width: 1440px;
+    }
+    }
+}

@@ -1,0 +1,21 @@
+<div #scroller class="feed">
+  <div class="feed__header">
+    <ng-container *ngIf="user && !room">
+      <div>
+        <span class="feed__header--status" [ngClass]=(user?.status)></span>
+        <span class="feed__header--name">{{user?.displayName}}</span>
+      </div>
+      <span class="feed__header--name">{{user?.email}}</span>
+    </ng-container>
+
+    <ng-container *ngIf="room && !user">
+      <span class="feed__header--name">{{room?.roomName}}</span>
+    </ng-container>
+  </div>
+  <div class="feed__content">
+    <ng-container *ngFor="let message of feed | sortBy: 'asc' : 'timeSent'">
+      <app-chat-message [message]="message" [user]="user"></app-chat-message>
+    </ng-container>
+  </div>
+  <mat-spinner *ngIf="loading"></mat-spinner>
+</div>

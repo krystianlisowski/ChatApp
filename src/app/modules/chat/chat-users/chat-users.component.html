@@ -1,0 +1,7 @@
+<div class="users">
+  <div class="users__content">
+    <ng-container *ngFor="let user of users">
+      <app-chat-user-item [user]="user" (click)="checkUser(user)"></app-chat-user-item>
+    </ng-container>
+  </div>
+</div>

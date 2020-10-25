@@ -1,0 +1,12 @@
+<div class="dialog">
+    <h2 class="c-heading c-heading--level2">Wpisz nazwę i utwórz nowy pokój!</h2>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="roomName" type="text" placeholder="Nazwa pokoju">
+    </mat-form-field>
+
+    <div class="dialog__buttons">
+        <button mat-raised-button color="primary" [mat-dialog-close]="roomName">Zapisz zmiany</button>
+        <button mat-raised-button color="warn" [mat-dialog-close]>Anuluj</button>
+    </div>
+</div>

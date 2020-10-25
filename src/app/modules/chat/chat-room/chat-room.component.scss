@@ -1,0 +1,10 @@
+@import '../../../styles/02-tools/mixins';
+@import '../../../styles/01-settings/variables';
+
+.desktop {
+  display: none;
+
+  @include large-up {
+    display: block;
+  }
+}

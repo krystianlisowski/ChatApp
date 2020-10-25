@@ -1,0 +1,54 @@
+<mat-toolbar class="header" color="primary">
+  <div class="header__logo">
+    <img src="/assets/czaty_logo.png" alt="">
+  </div>
+
+  <span *ngIf="user" class="header__user">
+    <mat-icon class="header__icon" aria-hidden="false"
+              aria-label="Logout">account_circle
+  </mat-icon>
+    Cześć, {{user?.email}}
+  </span>
+
+  <div class="u-display-flex u-align-center">
+    <span *ngIf="!user" routerLink='/register' class="header__icon--container header__user">
+      <mat-icon class="header__icon" aria-hidden="false"
+                aria-label="Logout">group_add
+    </mat-icon>
+    Zarejestruj się
+    </span>
+
+    <span *ngIf="!user" routerLink='/login' class="header__icon--container header__user">
+      <mat-icon class="header__icon" aria-hidden="false"
+                aria-label="Logout">login
+    </mat-icon>
+    Zaloguj się
+    </span>
+
+    <span *ngIf="user" class="header__icon--container" (click)="logout()">
+      <mat-icon class="header__icon" aria-hidden="false"
+                aria-label="Logout">exit_to_app
+    </mat-icon>
+      Wyloguj się
+    </span>
+  </div>
+</mat-toolbar>
+
+<input type="checkbox" id="navigation"/>
+<label for="navigation">
+  <mat-icon>menu</mat-icon>
+</label>
+
+<nav class="c-nav__mobile">
+  <ul class="c-nav__mobile-ul">
+    <li class="c-nav__mobile-li">
+      <p>Użytkownicy</p>
+    </li>
+    <li class="c-nav__mobile-li">
+      <app-chat-users class="u-w-100"></app-chat-users>
+    </li>
+    <li class="c-nav__mobile-li">
+      <button (click)="logout()" mat-raised-button color="primary">Wyloguj się</button>
+    </li>
+  </ul>
+</nav>

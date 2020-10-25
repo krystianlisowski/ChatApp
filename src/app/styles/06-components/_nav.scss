@@ -1,0 +1,78 @@
+  .c-nav__mobile{
+      position:fixed;
+      top:0;
+      left:0;
+      width:270px;
+      height:100%;
+      margin:0 0 0 -300px;
+      -moz-transition:all 200ms ease-in;
+      -webkit-transition:all 200ms ease-in;
+      -o-transition:all 200ms ease-in;
+      transition:all 200ms ease-in;
+      z-index:500;
+
+  
+    &-ul{
+      width:270px;
+      height:100%;
+      padding:0;
+      margin:0;
+      list-style:none;
+      background: $gray-dark;
+      overflow:hidden;
+    }
+  
+    &-li{
+      color: $white;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      
+      p {
+          margin-top: 20px;
+          font-size: $font-size-3;
+          text-align: center;
+          font-weight: 600;
+      }
+    }
+  }
+  
+  :host {
+    label{
+        display:block;
+        line-height:42px;
+        color: $yellow-primary;
+        text-align:center;
+        font-size:1.2em;
+        position:fixed;
+        top:10px;
+        left:10px;
+        -moz-transition:all 200ms ease-in;
+        -webkit-transition:all 200ms ease-in;
+        -o-transition:all 200ms ease-in;
+        transition:all 200ms ease-in;
+        z-index:500;
+      
+        @include large-up{
+          display: none;
+        }
+      }
+  }
+
+  input[type="checkbox"]{
+    display:none;
+  }
+  input[type="checkbox"]:checked ~ nav{
+    margin:0;
+  }
+  input[type="checkbox"]:checked ~ label{
+    left:300px;
+  }
+  input[type="checkbox"]:checked ~ section{
+    -webkit-transform:translate3d(300px, 0, 0);
+    -moz-transform:translate3d(300px, 0, 0);
+    -o-transform:translate3d(300px, 0, 0);
+    transform:translate3d(300px, 0, 0);
+  }
+  

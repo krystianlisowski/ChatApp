@@ -1,0 +1,12 @@
+<div class="rooms">
+  <div class="rooms__content">
+    <button (click)="openCreateDialog()" mat-raised-button color="primary" class="u-w-100 u-mb-15">Utwórz pokój</button>
+    <ng-container *ngFor="let room of rooms">
+      <div (click)="changeRoom(room)" class="rooms__item">
+                <span class="rooms__item-name">
+                    {{room.roomName}}
+                </span>
+      </div>
+    </ng-container>
+  </div>
+</div>

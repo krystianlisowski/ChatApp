@@ -1,0 +1,21 @@
+@import '../../../styles/01-settings/settings';
+@import '../../../styles/02-tools/mixins';
+
+.users {
+  height: 80vh;
+  width: 100%;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+
+  &__content {
+    padding: 25px 15px;
+    height: 100%;
+  }
+}

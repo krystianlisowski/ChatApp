@@ -1,0 +1,18 @@
+p, span {
+    font-size: $font-size-5;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: $font-size-4;
+    margin: 0;
+}
+
+a {
+    color: $gray-dark;
+    text-decoration: none;
+    &:hover {
+        color: $gray-dark;
+        text-decoration: underline;
+    }
+}

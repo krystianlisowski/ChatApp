@@ -1,0 +1,4 @@
+<div class="form">
+  <quill-editor [modules]="modules" (onContentChanged)="contentChanged($event)" (keydown)="handleSubmit($event)"></quill-editor>
+  <mat-icon matTooltip="Wyślij" (click)="send()">send</mat-icon>
+</div>

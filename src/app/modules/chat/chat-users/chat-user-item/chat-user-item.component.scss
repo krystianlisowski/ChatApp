@@ -1,0 +1,46 @@
+@import '../../../../styles/01-settings/variables';
+
+.userItem {
+  display: flex;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 2px solid $violet-primary;
+  color: $white;
+  border-radius: 4px;
+  transition: ease-in 0.3s;
+  cursor: pointer;
+}
+
+.userItem:hover {
+  border-color: $gray-light;
+  transition: ease-in 0.1s;
+}
+
+.online {
+  background-color: $green-water;
+}
+
+.busy {
+  background-color: $yellow-primary;
+}
+
+.offline {
+  background-color: $gray-dark;
+}
+
+.status {
+  border: 1px solid black;
+  display: inline-block;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.userName {
+  display: inline-block;
+}

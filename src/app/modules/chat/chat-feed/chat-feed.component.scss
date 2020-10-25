@@ -1,0 +1,65 @@
+@import '../../../styles/01-settings/settings';
+@import '../../../styles/02-tools/mixins';
+
+.feed {
+  background-color: $gray-light;
+  border: 2px solid $violet-primary;
+  border-bottom: unset;
+  height: 75vh;
+  width: 100%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  color: $white;
+  overflow: auto;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+
+  mat-spinner {
+    position: absolute;
+    top: 45%; /* position the top  edge of the element at the middle of the parent */
+    left: 45%; /* position the left edge of the element at the middle of the parent */
+  }
+
+  &__header {
+    background: $violet-primary;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    .online {
+      background-color: $green-water;
+    }
+
+    .busy {
+      background-color: $yellow-primary;
+    }
+
+    .offline {
+      background-color: $gray-dark;
+    }
+
+    &--status {
+      border: 1px solid black;
+      display: inline-block;
+      min-width: 12px;
+      min-height: 12px;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    &--name {
+      font-size: $font-size-6;
+      font-weight: 500;
+    }
+  }
+
+  &__content {
+    padding: 15px;
+  }
+}

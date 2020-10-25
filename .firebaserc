@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chatuj-d8e10": {
+      "hosting": {
+        "Messenger": [
+          "chatuj-d8e10"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chatuj-d8e10"
+  }
+}

@@ -1,0 +1,13 @@
+<div class="u-display-flex" [ngClass]="{'message__guest--position': !isOwnMessage, 'message__own--position': isOwnMessage}">
+  <div [ngClass]="{'message__guest': !isOwnMessage, 'message__own': isOwnMessage}" class="message">
+    <div class="u-display-flex u-align-center u-justify-space">
+      <span class="message__user">{{message.userName}}</span>
+      <span class="message__date">{{message.timeSent}}</span>
+    </div>
+    <span class="message__content" [innerHTML]="message.message"></span>
+    <div *ngIf="isOwnMessage" class="message__remove">
+      <mat-icon (click)="deleteMessage()" class="icon">delete_forever</mat-icon>
+    </div>
+  </div>
+</div>
+

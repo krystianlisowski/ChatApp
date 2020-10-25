@@ -1,0 +1,27 @@
+<div class="l-container">
+  <div class="l-row u-justify-center u-align-center">
+      <div class="l-col l-col--md33 login-content u-p-0">
+          <div class="login-content__header">
+              <img src="/assets/czaty_logo.png" alt="">
+              <span class="u-text-size-5 u-text-color--white">Zaloguj się i rozpocznij czat!</span>
+          </div>
+          <div class="login-content__form">
+              <form [formGroup]="loginForm">
+                  <mat-form-field>
+                      <input formControlName="email" matInput placeholder="Email">
+                      <mat-error *ngIf="email.dirty && email.hasError('required')">Email jest wymagany!</mat-error>
+                      <mat-error *ngIf="email.dirty && email.hasError('email')">Niepoprawny format!</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                      <input formControlName="password" type="password" matInput placeholder="Hasło">
+                      <mat-error *ngIf="password.dirty && password.hasError('required')">Hasło jest wymagane!</mat-error>
+                  </mat-form-field>
+              </form>
+              <button (click)="login()" [disabled]="loginForm.invalid" mat-raised-button color="accent">Zaloguj się</button>
+              <span class="u-text-size-7 u-mt-20">Nie posiadasz jeszcze konta?
+                <a class="u-text-link" href="/register">Zarejestruj się</a> ,
+                aby korzystać z aplikacji Czaty.</span>
+          </div>
+      </div>
+  </div>
+</div>
